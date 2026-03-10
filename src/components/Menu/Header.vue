@@ -6,23 +6,141 @@ const isActive = ref(false);
 </script>
 
 <template>
-    <a href="#">
-        <h3>Sobre Nosotros</h3>
-    </a>
-    <a href="#">
-        <h3>Tienda en linea</h3>
-    </a>
-    <a href="#">
-        <img src="/general_assets/logo_gh.png"/>
-    </a>
-    <a href="#">
-        <img src="/general_assets/logo_ln.png"/>
-    </a>
-    <a href="#">
-        <h3>Contacto</h3>
-    </a>
-    <SliderMode />
+    <div class="background">
+        <a href="#">
+            <div class="button-style-1">
+                    <h3>Sobre Nosotros</h3>
+            </div>
+        </a>
+        <a href="#">
+            <div class="button-style-1">
+                    <h3>Tienda Online</h3>
+            </div>
+        </a>
+
+        <div class="separator"></div>
+
+        <a href="https://github.com/KINASISDEV" target="_blank">
+            <div class="button-style-2">
+                <img src="/general_assets/logo_gh.png"/>
+            </div>
+        </a>
+        <a href="https://www.linkedin.com/company/kinasis-dev/" target="_blank">
+            <div class="button-style-2">
+                    <img src="/general_assets/logo_ln.png"/>
+            </div>
+        </a>
+        <a href="https://www.instagram.com/kinasis_dev/" target="_blank">
+            <div class="button-style-2">
+                    <img src="/general_assets/logo_ig.png"/>
+            </div>
+        </a>
+        <div class="left-separation">
+            <a>
+                <div class="button-style-3">
+                    <h3>Contacto</h3>
+                </div>        
+            </a>
+            <SliderMode />
+        </div>
+    </div>
 </template>
 
 <style scoped>
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    transition: filter 0.3s ease;
+}
+
+.dark-mode img {
+    filter: invert(1);
+}
+
+.background {
+    background: transparent;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: 100%;
+    padding: 0px 0pxs;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.button-style-1, .button-style-2, .button-style-3 {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button-style-1 {
+    transition: transform 0.15s ease;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 16px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    box-shadow: 0 5px var(--shadow-color);
+    transition: all 0.1s ease;
+}
+
+.button-style-1:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.button-style-1:active {
+    transform: scale(0.85);
+    transform: translateY(4px);
+    box-shadow: 0 1px var(--shadow-color);
+}
+
+.separator {
+    display: inline-block;
+    width: 1px;
+    height: 30px;
+    background-color: var(--primary-color);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.button-style-2 img{
+    width: 28px;
+    height: 28px;
+    transition: all 0.3s ease;
+}
+
+.button-style-2 img:hover {
+    transform: scale(1.2);
+    filter: invert(0) drop-shadow(0 0 10px var(--primary-color));
+}
+
+.dark-mode .button-style-2 img:hover {
+    filter: invert(1) drop-shadow(0 0 10px var(--primary-color));
+}
+
+.left-separation {
+    margin-top: 10px;
+    float: right;
+    margin-right: 20px;
+}
+
+.button-style-3 {
+    background-color: transparent;
+    color: var(--primary-color);
+    font-size: 16px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 1px solid var(--primary-color);
+    transition: all 0.1s ease;
+}
+
+
 </style>
