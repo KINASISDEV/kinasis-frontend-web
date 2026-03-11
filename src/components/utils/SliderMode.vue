@@ -2,6 +2,7 @@
 import { ref, watch, onMounted } from 'vue';
 
 const isDarkMode = ref(false);
+
 const applyMode = (dark) => {
     if (dark) {
         document.documentElement.classList.add('dark-mode');
@@ -14,15 +15,16 @@ const applyMode = (dark) => {
 
 watch(isDarkMode, (newValue) => {
     applyMode(newValue);
-    localStorage.setItem('darkMode', newValue);
+    localStorage.setItem('darkMode', String(newValue));
 });
 
 onMounted(() => {
     const savedMode = localStorage.getItem('darkMode');
     if (savedMode !== null) {
         isDarkMode.value = savedMode === 'true';
+    } else {
+        isDarkMode.value = document.documentElement.classList.contains('dark-mode');
     }
-    applyMode(isDarkMode.value);
 });
 </script>
 
