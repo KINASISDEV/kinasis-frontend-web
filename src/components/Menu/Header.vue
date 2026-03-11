@@ -38,6 +38,7 @@ import SliderMode from '../utils/SliderMode.vue';
                     <h3>Contacto</h3>
                 </div>        
             </router-link>
+            <div class="separator"></div>
             <SliderMode />
         </div>
     </div>
@@ -69,8 +70,6 @@ img {
     z-index: 10;
     overflow: hidden;
     box-shadow: 
-        0 2px 10px var(--primary-color),
-        0 1px 12px var(--primary-color),
         0 0 16px var(--shadow-color);
 }
 

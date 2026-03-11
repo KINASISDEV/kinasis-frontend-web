@@ -37,6 +37,7 @@ import SliderMode from '../utils/SliderMode.vue';
                 <div class="button-style-1">
                         <h3>Tienda Online</h3>
                 </div>
+            <div class="separator"></div>
             </router-link>
             <SliderMode />
         </div>
@@ -69,8 +70,6 @@ img {
     z-index: 10;
     overflow: hidden;
     box-shadow: 
-        0 2px 10px var(--primary-color),
-        0 1px 12px var(--primary-color),
         0 0 16px var(--shadow-color);
 }
 

@@ -224,8 +224,8 @@ const {
     z-index: 2;
 }
 
-.dark .banner-contact h1 {
-    color: #111827;
+.dark-mode .banner-contact h1 {
+    color: black;
     text-shadow:
         0 4px 8px rgba(255, 255, 255, 0.3),
         0 0 20px rgba(0, 0, 0, 0.2),
@@ -245,8 +245,8 @@ const {
     z-index: 2;
 }
 
-.dark .banner-contact h2 {
-    color: rgba(17, 24, 39, 0.9);
+.dark-mode .banner-contact h2 {
+    color: black;
     text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
 }
 
