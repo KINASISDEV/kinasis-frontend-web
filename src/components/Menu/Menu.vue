@@ -12,8 +12,8 @@ import background1 from '../utils/background1.vue';
             <h2>Desarrollo profesional con software de calidad.</h2>
         </div>
         <div class="buttons-bar">
-            <a href="/website" class="button">Sitio Web</a>
-            <a href="/ecommerce" class="button">Tienda Online</a>
+            <router-link to="/website" class="button">Sitio Web</router-link>
+            <router-link to="/ecommerce" class="button">Tienda Online</router-link>
         </div>
     </div>
 </template>

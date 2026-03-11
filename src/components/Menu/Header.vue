@@ -1,22 +1,19 @@
 <script setup>
-import { ref } from 'vue';
 import SliderMode from '../utils/SliderMode.vue';
-
-const isActive = ref(false);
 </script>
 
 <template>
     <div class="background">
-        <a href="website">
+        <router-link to="/website">
             <div class="button-style-1">
                     <h3>Sobre Nosotros</h3>
             </div>
-        </a>
-        <a href="ecommerce">
+        </router-link>
+        <router-link to="/ecommerce">
             <div class="button-style-1">
                     <h3>Tienda Online</h3>
             </div>
-        </a>
+        </router-link>
 
         <div class="separator"></div>
 
@@ -36,11 +33,11 @@ const isActive = ref(false);
             </div>
         </a>
         <div class="left-separation">
-            <a href="contactus">
+            <router-link to="/contact">
                 <div class="button-style-3">
                     <h3>Contacto</h3>
                 </div>        
-            </a>
+            </router-link>
             <SliderMode />
         </div>
     </div>
