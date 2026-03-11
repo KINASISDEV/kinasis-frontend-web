@@ -36,7 +36,7 @@ const isActive = ref(false);
             </div>
         </a>
         <div class="left-separation">
-            <a>
+            <a href="#">
                 <div class="button-style-3">
                     <h3>Contacto</h3>
                 </div>        
@@ -77,6 +77,7 @@ img {
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    vertical-align: middle;
 }
 
 .button-style-1 {
@@ -109,6 +110,7 @@ img {
     background-color: var(--primary-color);
     margin-left: 20px;
     margin-right: 20px;
+    vertical-align: middle;
 }
 
 .button-style-2 img{
@@ -142,5 +144,13 @@ img {
     transition: all 0.1s ease;
 }
 
+.button-style-3:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
 
+.button-style-3:active {
+    transform: scale(0.85);
+
+}
 </style>

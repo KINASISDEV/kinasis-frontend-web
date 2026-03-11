@@ -4,11 +4,59 @@ import Header from './Header.vue'
 
 <template>
     <Header />
-    <h1>KINASIS DEV</h1>
-    <h2>Desarrollo profesional de software con calidad.</h2>
-    <button>Sitio Web</button>
-    <button>Tienda Online</button>
+    <div class="content">
+        <div class="tittle-head">
+            <h1>KINASIS DEV</h1>
+            <h2>Desarrollo profesional de software con calidad.</h2>
+        </div>
+        <div class="buttons-bar">
+            <button link="#">Sitio Web</button>
+            <button link="#">Tienda Online</button>
+        </div>
+    </div>
 </template>
 
 <style scoped>
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100vh - 60px);
+}
+
+.tittle-head h1{
+    font-size: 120px;
+    color: var(--primary-color);
+}
+
+.tittle-head h2{
+    font-size: 30px;
+}
+
+button {
+    border: none;
+    margin: 100px;
+    font-size: 20px;
+    padding: 15px 15px;
+    border-radius: 15px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 0 5px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    transform: scale(1.15);
+    box-shadow: 0 5px var(--shadow-color);
+}
+
+button:active {
+    transform: scale(0.85);
+    transform: translateY(4px);
+    box-shadow: 0 1px var(--shadow-color);
+}
+
 </style>
