@@ -11,12 +11,6 @@ import SliderMode from '../utils/SliderMode.vue';
             </div>
         </router-link>
 
-        <a href="/">
-            <div class="button-style-3">
-                <h3>Volver</h3>
-            </div>
-        </a>
-
         <div class="separator"></div>
 
         <a href="https://github.com/KINASISDEV" target="_blank">
@@ -35,15 +29,15 @@ import SliderMode from '../utils/SliderMode.vue';
             </div>
         </a>
         <div class="left-separation">
-            <router-link to="/website">
-                <div class="button-style-1">
-                        <h3>Sobre Nosotros</h3>
-                </div>
-            </router-link>
             <router-link to="/ecommerce">
                 <div class="button-style-1">
-                        <h3>Tienda Online</h3>
+                        <h3>Productos</h3>
                 </div>
+            </router-link>
+            <router-link to="/contact">
+                <div class="button-style-3">
+                    <h3>Contacto</h3>
+                </div>        
             </router-link>
             <div class="separator"></div>
             <SliderMode />
@@ -111,18 +105,14 @@ img {
     transition: transform 0.15s ease;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    font-size: 16px;
+    font-size: 14px;
     padding-bottom: 5px;
     padding-top: 5px;
     box-shadow: 0 5px var(--shadow-color);
     transition: all 0.1s ease;
 }
 
-.button-style-1:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-}
+
 
 .button-style-1:active {
     transform: scale(0.85);
@@ -169,7 +159,6 @@ img {
     padding-top: 5px;
     border: 1px solid var(--primary-color);
     transition: all 0.1s ease;
-    cursor: pointer;
 }
 
 .button-style-3:hover {
