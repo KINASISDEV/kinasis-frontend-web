@@ -7,6 +7,10 @@ import background1 from '../utils/background1.vue';
     <background1 />
     <Header />
     <div class="content">
+        <div class="logo_kinasis">
+            <img src="/general_assets/logo_white.png" class="logo-light"/>
+            <img src="/general_assets/logo_dark.png" class="logo-dark"/>
+        </div>
         <div class="tittle-head">
             <h1>KINASIS</h1>
             <h2>Desarrollo profesional con software de calidad.</h2>
@@ -31,6 +35,22 @@ import background1 from '../utils/background1.vue';
     z-index: 1;
 }
 
+.logo_kinasis img {
+    width: 220px;
+}
+
+.logo_kinasis .logo-dark {
+    display: none;
+}
+
+.dark-mode .logo_kinasis .logo-light {
+    display: none;
+}
+
+.dark-mode .logo_kinasis .logo-dark {
+    display: block;
+}
+
 .tittle-head h1{
     font-size: 120px;
     font-family: 'Orbitron', sans-serif;
@@ -50,7 +70,7 @@ import background1 from '../utils/background1.vue';
     display: inline-block;
     text-decoration: none;
     border: none;
-    margin: 100px;
+    margin: 80px;
     font-size: 20px;
     padding: 15px 15px;
     border-radius: 15px;

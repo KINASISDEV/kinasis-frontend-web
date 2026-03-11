@@ -18,8 +18,9 @@
 
             <div class="footer-section">
                 <h4>Soporte</h4>
-                <p><a href="/ContactPage">Contacto</a></p>
+                <p><a href="/Contact">Contacto</a></p>
                 <p><a href="/WorkPage">Servicios</a></p> <!-- cambiar direccion a servicios -->
+                <p><a href="https://kinasis.netlify.app/" target="_blank">Mas sobre nosotros</a></p>
             </div>
         </div>
 

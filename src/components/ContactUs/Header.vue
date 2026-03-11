@@ -4,6 +4,13 @@ import SliderMode from '../utils/SliderMode.vue';
 
 <template>
     <div class="background">
+        <router-link to="/">
+            <div class="logo_kinasis">
+                <img src="/general_assets/logo_white.png" class="logo-light"/>
+                <img src="/general_assets/logo_dark.png" class="logo-dark"/>
+            </div>
+        </router-link>
+
         <a href="/">
             <div class="button-style-3">
                 <h3>Volver</h3>
@@ -55,7 +62,7 @@ img {
     transition: filter 0.3s ease;
 }
 
-.dark-mode img {
+.dark-mode .button-style-2 img {
     filter: invert(1);
 }
 
@@ -73,7 +80,25 @@ img {
         0 0 16px var(--shadow-color);
 }
 
-.button-style-1, .button-style-2, .button-style-3 {
+.logo_kinasis img {
+    width: 35px;
+    height: auto;
+    margin: 0;
+}
+
+.logo_kinasis .logo-dark {
+    display: none;
+}
+
+.dark-mode .logo_kinasis .logo-light {
+    display: none;
+}
+
+.dark-mode .logo_kinasis .logo-dark {
+    display: block;
+}
+
+.button-style-1, .button-style-2, .button-style-3, .logo_kinasis {
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
