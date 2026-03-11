@@ -1,9 +1,9 @@
 import emailjs from '@emailjs/browser'
 import { ref, computed } from 'vue'
 
-const PUBLIC_API_KEY = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
-const SERVICE_ID = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID
-const TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID
+const PUBLIC_API_KEY = import.meta.env.VITE_PUBLIC_EMAILJS_PUBLIC_KEY
+const SERVICE_ID = import.meta.env.VITE_PUBLIC_EMAILJS_SERVICE_ID
+const TEMPLATE_ID = import.meta.env.VITE_PUBLIC_EMAILJS_TEMPLATE_ID
 
 async function sendEmail(formData) {
 	try {
