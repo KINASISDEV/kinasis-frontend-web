@@ -66,11 +66,15 @@ img {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     width: 100%;
-    padding: 0px 0pxs;
     box-sizing: border-box;
-    border-bottom: 1px solid var(--primary-color);
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 10;
+    overflow: hidden;
+    box-shadow: 
+        0 2px 10px var(--primary-color),
+        0 1px 12px var(--primary-color),
+        0 0 16px var(--shadow-color);
 }
 
 .button-style-1, .button-style-2, .button-style-3 {

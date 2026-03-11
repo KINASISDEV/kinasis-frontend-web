@@ -8,8 +8,8 @@ import background1 from '../utils/background1.vue';
     <Header />
     <div class="content">
         <div class="tittle-head">
-            <h1>KINASIS DEV</h1>
-            <h2>Desarrollo profesional de software con calidad.</h2>
+            <h1>KINASIS</h1>
+            <h2>Desarrollo profesional con software de calidad.</h2>
         </div>
         <div class="buttons-bar">
             <button link="#">Sitio Web</button>
@@ -33,7 +33,13 @@ import background1 from '../utils/background1.vue';
 
 .tittle-head h1{
     font-size: 120px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
     color: var(--primary-color);
+    text-shadow: 
+        0 0 10px var(--primary-color),
+        0 0 11px var(--secondary-color);
+    letter-spacing: 5px;
 }
 
 .tittle-head h2{
