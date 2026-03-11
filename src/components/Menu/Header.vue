@@ -69,6 +69,8 @@ img {
     padding: 0px 0pxs;
     box-sizing: border-box;
     border-bottom: 1px solid var(--primary-color);
+    position: relative;
+    z-index: 10;
 }
 
 .button-style-1, .button-style-2, .button-style-3 {

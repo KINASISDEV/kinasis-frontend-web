@@ -1,8 +1,10 @@
 <script setup>
 import Header from './Header.vue'
+import background1 from '../utils/background1.vue';
 </script>
 
 <template>
+    <background1 />
     <Header />
     <div class="content">
         <div class="tittle-head">
@@ -25,6 +27,8 @@ import Header from './Header.vue'
     align-items: center;
     text-align: center;
     min-height: calc(100vh - 60px);
+    position: relative;
+    z-index: 1;
 }
 
 .tittle-head h1{
@@ -46,6 +50,7 @@ button {
     color: var(--secondary-color);
     box-shadow: 0 5px var(--shadow-color);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 button:hover{
