@@ -7,12 +7,12 @@ const isActive = ref(false);
 
 <template>
     <div class="background">
-        <a href="#">
+        <a href="website">
             <div class="button-style-1">
                     <h3>Sobre Nosotros</h3>
             </div>
         </a>
-        <a href="#">
+        <a href="ecommerce">
             <div class="button-style-1">
                     <h3>Tienda Online</h3>
             </div>
@@ -36,7 +36,7 @@ const isActive = ref(false);
             </div>
         </a>
         <div class="left-separation">
-            <a href="#">
+            <a href="contactus">
                 <div class="button-style-3">
                     <h3>Contacto</h3>
                 </div>        

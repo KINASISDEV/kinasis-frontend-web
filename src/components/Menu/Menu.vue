@@ -12,8 +12,8 @@ import background1 from '../utils/background1.vue';
             <h2>Desarrollo profesional con software de calidad.</h2>
         </div>
         <div class="buttons-bar">
-            <button link="#">Sitio Web</button>
-            <button link="#">Tienda Online</button>
+            <a href="/website" class="button">Sitio Web</a>
+            <a href="/ecommerce" class="button">Tienda Online</a>
         </div>
     </div>
 </template>
@@ -46,7 +46,9 @@ import background1 from '../utils/background1.vue';
     font-size: 30px;
 }
 
-button {
+.button {
+    display: inline-block;
+    text-decoration: none;
     border: none;
     margin: 100px;
     font-size: 20px;
@@ -59,12 +61,12 @@ button {
     cursor: pointer;
 }
 
-button:hover{
+.button:hover{
     transform: scale(1.15);
     box-shadow: 0 5px var(--shadow-color);
 }
 
-button:active {
+.button:active {
     transform: scale(0.85);
     transform: translateY(4px);
     box-shadow: 0 1px var(--shadow-color);
