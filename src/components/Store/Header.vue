@@ -66,7 +66,7 @@ img {
     -webkit-backdrop-filter: blur(20px);
     width: 100%;
     box-sizing: border-box;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 10;
     overflow: hidden;
