@@ -67,12 +67,15 @@ import background1 from '../utils/background1.vue';
 }
 
 .button {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     border: none;
     margin: 80px;
     font-size: 20px;
     padding: 15px 15px;
+    width:160px;
     border-radius: 15px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
