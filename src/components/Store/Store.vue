@@ -38,8 +38,13 @@ import Footer from '../utils/Footer.vue';
 }
 
 .head {
-    border-right: 1px solid var(--primary-color);
-    border-bottom: 1px solid var(--primary-color);
+    margin-top: 30px;
+    margin-left: 50px;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    box-shadow:
+        0 4px 10px 2px var(--shadow-color),
+        0 0 8px var(--shadow-color);
     width: 15%;
     height: 100%;
     align-items: center;
