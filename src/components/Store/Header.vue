@@ -62,16 +62,20 @@ img {
 
 .background {
     background: transparent;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    width: 100%;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(3px);
+    width: calc(100% - 78px);
     box-sizing: border-box;
     position: relative;
-    top: 0;
+    top: 10px;
     z-index: 10;
     overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--primary-color) 35%, transparent);
+    border-radius: 999px;
+    margin: 0 auto;
     box-shadow: 
-        0 0 16px var(--shadow-color);
+        0 10px 28px -18px var(--shadow-color),
+        0 0 14px var(--shadow-color);
 }
 
 .logo_kinasis img {
