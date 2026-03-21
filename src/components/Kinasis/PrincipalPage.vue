@@ -11,6 +11,7 @@ import Tech from './Tech.vue';
 
 <template>
     <background1 />
+    <Header />
     <div class="pages">
         <AboutUs />
         <Team />
