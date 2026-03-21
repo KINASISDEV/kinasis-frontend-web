@@ -1,10 +1,22 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+import { shouldShowRouteHeader } from '../utils/calls.js';
+import Background1 from '../utils/background1.vue';
 import Separator1 from '../utils/separator1.vue';
+import Header from './Header.vue';
+import Footer from '../utils/Footer.vue';
+
+const route = useRoute();
+const showRouteHeader = computed(() => shouldShowRouteHeader(route.path));
 
 </script>
 
 <template>
-    <Header />
+    <template v-if="showRouteHeader">
+        <Background1 />
+        <Header />
+    </template>
     <div class="content">
         <div class="tittle-head">
             <div class="logo_kinasis">
@@ -132,7 +144,10 @@ import Separator1 from '../utils/separator1.vue';
                 </article>
             </div>
         </div>
-    </div>  
+    </div>
+    <template v-if="showRouteHeader">
+        <Footer />
+    </template>
 </template>
 
 <style scoped>
