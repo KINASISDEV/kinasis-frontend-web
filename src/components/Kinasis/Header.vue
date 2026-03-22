@@ -15,12 +15,12 @@ import SliderMode from '../utils/SliderMode.vue';
         
         <router-link to="/website/aboutus">
             <div class="button-style-1">
-                    <h3>Sobre Nosotros</h3>
+                    <h3>Kinasis</h3>
             </div>
         </router-link>
         <router-link to="/website/ourteam">
             <div class="button-style-1">
-                    <h3>Nuestro Equipo</h3>
+                    <h3>Equipo</h3>
             </div>
         </router-link>
         <router-link to="/website/services">
@@ -30,7 +30,7 @@ import SliderMode from '../utils/SliderMode.vue';
         </router-link>
         <router-link to="/website/workflow">
             <div class="button-style-1">
-                    <h3>Flujo de trabajo</h3>
+                    <h3>Proceso</h3>
             </div>
         </router-link>
         <router-link to="/website/tecnologies">
@@ -128,7 +128,7 @@ img {
 .button-style-1, .button-style-2, .button-style-3, .logo_kinasis {
     display: inline-block;
     margin: 10px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
     vertical-align: middle;
