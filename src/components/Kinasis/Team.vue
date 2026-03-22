@@ -19,7 +19,6 @@ const currentFounderIndex = ref(0);
 let carouselInterval = null;
 
 function createErrorMessage(error, members) {
-    console.log(members);
     if(members == null || members.length === 0) {
         return 'Lo sentimos. No hay miembros disponibles.';
     }
