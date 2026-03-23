@@ -1,3 +1,4 @@
 export function shouldShowRouteHeader(path) {
-  return path !== '/website';
+  const normalizedPath = String(path || '/').replace(/\/+$/, '') || '/';
+  return normalizedPath !== '/website';
 }
