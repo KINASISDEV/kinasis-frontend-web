@@ -6,8 +6,8 @@ import PrincipalPage from '../components/Kinasis/PrincipalPage.vue'
 import AboutUs from '../components/Kinasis/AboutUs.vue'
 import Team from '../components/Kinasis/Team.vue'
 import Services from '../components/Kinasis/Services.vue'
-import WorkFlow from '../components/Kinasis/WorkFlow.vue'
 import Tech from '../components/Kinasis/Tech.vue'
+import WorkFlow from '../components/Kinasis/WorkFlow/WorkFlow.vue'
 
 
 const routes = [

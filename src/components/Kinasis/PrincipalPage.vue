@@ -5,7 +5,7 @@ import Footer from '../utils/Footer.vue';
 import AboutUs from './AboutUs.vue';
 import Team from './Team.vue';
 import Services from './Services.vue';
-import WorkFlow from './WorkFlow.vue';
+import WorkFlow from './WorkFlow/WorkFlow.vue';
 import Tech from './Tech.vue';
 </script>
 
