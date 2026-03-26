@@ -26,7 +26,8 @@ onUnmounted(cleanupWorkflow);
           <p class="subtitle">combina estrategia y tecnología en cada proyecto<br>demostrando resultados con Kinasis.</p>
         </div>
         <div class="right">
-          <img src="/general_assets/logo_dark.png" alt="Proceso" class="plain-img" />
+            <img src="/general_assets/logo_white.png" class="plain-img-light"/>
+            <img src="/general_assets/logo_dark.png" class="plain-img-dark"/>
         </div>
       </div>
     </section>
