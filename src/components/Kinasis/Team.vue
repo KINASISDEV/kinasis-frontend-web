@@ -85,7 +85,7 @@ const showRouteHeader = computed(() => shouldShowRouteHeader(route.path));
     </template>
     <section class="founders">
         <div class="founders-header">
-            <h1>Nuestros Fundadores</h1>
+            <h1>Fundadores</h1>
             <p class="founders-intro">
                 Los fundadores de Kinasis fueron visionarios que identificaron una oportunidad única en el panorama tecnológico global. 
                 Con valentía y determinación, decidieron dar el salto que transformaría sus aspiraciones en realidad.
@@ -248,7 +248,7 @@ const showRouteHeader = computed(() => shouldShowRouteHeader(route.path));
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #00d4ff 100%);
+    background: linear-gradient(135deg, var(--primary-color) 20%, var(--gradient-color) 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -387,7 +387,7 @@ const showRouteHeader = computed(() => shouldShowRouteHeader(route.path));
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #00d4ff 100%);
+    background: linear-gradient(135deg, var(--primary-color) 25%, var(--gradient-color) 75%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -423,7 +423,7 @@ const showRouteHeader = computed(() => shouldShowRouteHeader(route.path));
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 3px solid var(--primary-color);
-    box-shadow: 0 8px 32px 0 rgba(var(--primary-rgb, 0, 212, 255), 0.3),
+    box-shadow: 0 8px 32px 0 color-mix(in srgb, var(--gradient-color) 30%, transparent),
                 0 0 0 1px rgba(255, 255, 255, 0.1);
     animation: float 3s ease-in-out infinite;
 }
@@ -444,7 +444,7 @@ const showRouteHeader = computed(() => shouldShowRouteHeader(route.path));
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(var(--primary-rgb, 0, 212, 255), 0.2);
+    background: color-mix(in srgb, var(--gradient-color) 20%, transparent);
     backdrop-filter: blur(10px);
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
@@ -457,13 +457,12 @@ const showRouteHeader = computed(() => shouldShowRouteHeader(route.path));
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    z-index: 10;
 }
 
 .carousel-arrow:hover {
-    background: rgba(var(--primary-rgb, 0, 212, 255), 0.4);
+    background: color-mix(in srgb, var(--gradient-color) 20%, transparent);
     transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 0 20px rgba(var(--primary-rgb, 0, 212, 255), 0.6);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--gradient-color) 30%, transparent);
 }
 
 .carousel-arrow-prev {
@@ -488,7 +487,7 @@ const showRouteHeader = computed(() => shouldShowRouteHeader(route.path));
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: rgba(var(--primary-rgb, 0, 212, 255), 0.3);
+    background: color-mix(in srgb, var(--gradient-color) 20%, transparent);
     border: 2px solid var(--primary-color);
     cursor: pointer;
     transition: all 0.3s ease;
@@ -497,11 +496,11 @@ const showRouteHeader = computed(() => shouldShowRouteHeader(route.path));
 .indicator.active {
     background: var(--primary-color);
     transform: scale(1.2);
-    box-shadow: 0 0 10px rgba(var(--primary-rgb, 0, 212, 255), 0.6);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--gradient-color) 20%, transparent);
 }
 
 .indicator:hover {
-    background: rgba(var(--primary-rgb, 0, 212, 255), 0.6);
+    background: color-mix(in srgb, var(--gradient-color) 20%, transparent);
 }
 
 .loading-text,

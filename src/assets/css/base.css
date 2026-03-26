@@ -4,6 +4,7 @@
     --background-color: #e2e2e2;
     --shadow-color: #aa1a23;
     --font-color: #111827;
+    --gradient-color: #ff0099;
 }
 
 :root.dark-mode,
@@ -13,6 +14,7 @@
     --background-color: #111827;
     --shadow-color: #368a7d;
     --font-color: #e2e2e2;
+    --gradient-color: #00d4ff;
 
 }
 
