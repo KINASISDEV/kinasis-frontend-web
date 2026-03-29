@@ -3,6 +3,8 @@ import { onMounted, onUnmounted, computed } from 'vue';
 import { useRoute } from 'vue-router';
 import { shouldShowRouteHeader } from '../../utils/calls.js';
 import Background1 from '../../utils/background1.vue';
+import Separator2 from '../../utils/separator2.vue';
+import Separator3 from '../../utils/Separator3.vue';
 import Header from '../Header.vue';
 import Footer from '../../utils/Footer.vue';
 import { steps, canvasRef, svgRef, inView, setupWorkflow, cleanupWorkflow } from './workflow.js';
@@ -18,20 +20,20 @@ onUnmounted(cleanupWorkflow);
     <template v-if="showRouteHeader">
       <Background1 />
       <Header />
+      <section class="section workflow-section" data-step="hero">
+        <div class="container split">
+          <div class="left up-30">
+            <h1 class="title">Nuestro proceso</h1>
+            <p class="subtitle">combina estrategia y tecnología en cada proyecto<br>demostrando resultados con Kinasis.</p>
+          </div>
+          <div class="right">
+              <img src="/general_assets/logo_white.png" class="plain-img-light"/>
+              <img src="/general_assets/logo_dark.png" class="plain-img-dark"/>
+          </div>
+        </div>
+      </section>
+      <Separator2 />  
     </template>
-    <section class="section workflow-section" data-step="hero">
-      <div class="container split">
-        <div class="left up-30">
-          <h1 class="title">Nuestro proceso</h1>
-          <p class="subtitle">combina estrategia y tecnología en cada proyecto<br>demostrando resultados con Kinasis.</p>
-        </div>
-        <div class="right">
-            <img src="/general_assets/logo_white.png" class="plain-img-light"/>
-            <img src="/general_assets/logo_dark.png" class="plain-img-dark"/>
-        </div>
-      </div>
-    </section>
-    <Separator1 />
 
     <section class="section workflow-section" data-step="steps">
       <div class="container center">
@@ -49,7 +51,7 @@ onUnmounted(cleanupWorkflow);
       </div>
     </section>
 
-    <Separator1 />
+    <Separator3 />
     <section class="section workflow-section" data-step="flow">
       <div class="container center">
         <h2 class="title mb-3">Flujo de Desarrollo</h2>
@@ -75,7 +77,7 @@ onUnmounted(cleanupWorkflow);
       </div>
     </section>
 
-    <Separator1 />
+    <Separator3 />
     <section class="section workflow-section" data-step="patterns">
       <div class="container center">
         <h2 class="title mb-3">Arquitecturas de software</h2>
