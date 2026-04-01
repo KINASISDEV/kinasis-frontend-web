@@ -62,3 +62,26 @@ export async function getAllMembers() {
         };
     }
 }
+
+export async function getCatalogByName(catalogName) {
+    const endpoint = URL_API + 'catalogs';
+    const query = `name=${catalogName}`;
+    try {
+        const response = await fetch(`${endpoint}?${query}`, { method: 'GET', mode: 'cors' });
+        if (!response.ok) {
+            throw new Error(`${response.status} ${response.statusText}`);
+        }
+        const payload = await response.json();
+        return {
+            data: payload || {},
+            error: null
+        };
+    }
+    catch (error) {
+        console.error(error);
+        return {
+            catalog: null,
+            error: 'No se pudo cargar el catálogo en este momento.'
+        };
+    }
+}

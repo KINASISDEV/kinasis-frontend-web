@@ -92,7 +92,9 @@ onUnmounted(cleanupWorkflow);
         </div>
       </div>
     </section>
-    <Footer />
+    <template v-if="showRouteHeader">
+      <Footer />
+    </template>
   </div>
 </template>
 
