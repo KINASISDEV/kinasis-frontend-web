@@ -39,14 +39,14 @@ onMounted(async () => {
     <div class="content">
         <div class="head-continer">
             <h1 class="title-text">Tecnologías Empleadas</h1>
-            <h4 class="description">
+            <p class="description">
                 En Kinasis, utilizamos una amplia gama de tecnologías y herramientas para ofrecer soluciones innovadoras y eficientes a nuestros clientes. 
                 Nuestra experiencia abarca desde el desarrollo web, el análisis de datos, aplicativos de escritorio, sitios Ecommerce, entre otros.
-            </h4>
-            <h4 class="description">
+            </p>
+            <p class="description">
                 Nuestra meta es mantenernos a la vanguardia de las tendencias tecnológicas 
                 para garantizar que nuestros clientes reciban las mejores soluciones adaptadas a sus necesidades específicas.
-            </h4>
+            </p>
         </div>
         <div class="tecnologies-card">
             <p v-if="isLoading" class="loading-text">Cargando tecnologías...</p>
@@ -130,10 +130,10 @@ onMounted(async () => {
         <div class="goals-container">
             <Separator2 />
             <h2 class="goals-title">En Proceso.</h2>
-            <h5 class="goals-description">
+            <p class="goals-description">
                 Buscamos especializarnos en nuevos desarrollos y tecnologías, como el desarrollo de 
                 aplicaciones móviles, inteligencia artificial, machine learning, entre otros.
-            </h5>
+            </p>
             <p v-if="isLoading" class="loading-text">Cargando tecnologías...</p>
             <p v-else-if="loadError" class="error-text">{{ loadError }}</p>
             <div v-else class="techs-container">
