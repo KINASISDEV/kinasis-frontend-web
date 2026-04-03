@@ -22,6 +22,7 @@ jobs:
 
       - name: Validar acceso a Amplify
         run: |
+          echo "Validando acceso a Amplify..."
           aws amplify get-app --app-id "${{ vars.AMPLIFY_APP_ID }}"
 
   estado-prod:
@@ -47,8 +48,14 @@ jobs:
             --query 'jobSummaries[0].jobId' \
             --output text)
 
-          echo "JOB_ID=$JOB_ID" >> $GITHUB_ENV
           echo "Ultimo job en PROD: $JOB_ID"
+
+          if [ "$JOB_ID" = "None" ] || [ -z "$JOB_ID" ]; then
+            echo "No hay jobs en Amplify para la rama main"
+            exit 1
+          fi
+
+          echo "JOB_ID=$JOB_ID" >> $GITHUB_ENV
 
       - name: Consultar estado de PROD
         run: |
@@ -89,8 +96,14 @@ jobs:
             --query 'jobSummaries[0].jobId' \
             --output text)
 
-          echo "JOB_ID=$JOB_ID" >> $GITHUB_ENV
           echo "Ultimo job en DEVEL: $JOB_ID"
+
+          if [ "$JOB_ID" = "None" ] || [ -z "$JOB_ID" ]; then
+            echo "No hay jobs en Amplify para la rama devel"
+            exit 1
+          fi
+
+          echo "JOB_ID=$JOB_ID" >> $GITHUB_ENV
 
       - name: Consultar estado de DEVEL
         run: |
