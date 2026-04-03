@@ -19,6 +19,7 @@ const routes = [
   {path: '/website/ourteam', name: 'team', component: Team},
   {path: '/website/services', name: 'services', component: Services},
   {path: '/website/workflow', name: 'workflow', component: WorkFlow},
+  {path: '/website/services', name: 'services', component: Services},
   {path: '/website/tecnologies', name: 'tecnologies', component: Tech}
 ]
 

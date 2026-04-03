@@ -50,7 +50,7 @@ onMounted(async () => {
     const [adminPayload, otherPayload, foundersPayload] = await Promise.all([
         getMembers(true),
         getMembers(false),
-        getAllMembers()
+        getAllMembers('data/allImages')
     ]);
 
     members.value = adminPayload.members;

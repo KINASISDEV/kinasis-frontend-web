@@ -15,8 +15,8 @@ import Tech from './Tech.vue';
     <div class="pages">
         <AboutUs />
         <Team />
-        <Services />
         <WorkFlow />
+        <Services />
         <Tech />
     </div>
     <Footer />
