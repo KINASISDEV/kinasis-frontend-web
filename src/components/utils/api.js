@@ -1,11 +1,11 @@
 const URL_API = import.meta.env.VITE_API_URL;
 
-function buildMemberPhotoSrc(prefix) {
+function buildPhotoSrc(enpoint, prefix) {
     const safePrefix = String(prefix || '').trim();
     if (!safePrefix) return '';
 
     const qs = new URLSearchParams({ prefix: safePrefix });
-    return `${URL_API + "members/getImageMemberS3"}?${qs.toString()}`;
+    return `${URL_API + enpoint}?${qs.toString()}`;
 }
 
 function normalizeMembers(payload) {
@@ -13,7 +13,16 @@ function normalizeMembers(payload) {
 
     return safeMembers.map((member) => ({
         ...member,
-        photoSrc: buildMemberPhotoSrc(member?.foto)
+        photoSrc: buildPhotoSrc("members/getImageMemberS3", member?.foto)
+    }));
+}
+
+function normalizeServices(payload) {
+    const safeServices = Array.isArray(payload) ? payload : [];
+
+    return safeServices.map((services) => ({
+        ...services,
+        photoSrc: buildPhotoSrc("data/getImageFromS3", services?.iconRoute)
     }));
 }
 
@@ -40,8 +49,8 @@ export async function getMembers(isAdmin) {
     }
 }
 
-export async function getAllMembers() {
-    const endpoint = URL_API + 'data/allImages';
+export async function getAllMembers(prefix) {
+    const endpoint = URL_API + prefix;
     const qs = new URLSearchParams({ prefix: 'members-images/founders/' });
     
     try {
@@ -59,6 +68,49 @@ export async function getAllMembers() {
         return {
             images: [],
             error: 'No se pudieron cargar las imágenes en este momento.'
+        };
+    }
+}
+
+export async function getCatalogByName(catalogName) {
+    const endpoint = URL_API + 'catalogs';
+    const query = `name=${catalogName}`;
+    try {
+        const response = await fetch(`${endpoint}?${query}`, { method: 'GET', mode: 'cors' });
+        if (!response.ok) {
+            throw new Error(`${response.status} ${response.statusText}`);
+        }
+        const payload = await response.json();
+        return {
+            data: payload || {},
+            error: null
+        };
+    }
+    catch (error) {
+        console.error(error);
+        return {
+            catalog: null,
+            error: 'No se pudo cargar el catálogo en este momento.'
+        };
+    }
+}
+
+export async function getServices() {
+    const endpoint = URL_API + 'services';
+    try {
+        const response = await fetch(endpoint, { method: 'GET', mode: 'cors' });
+        const payload = await response.json();
+        const safeServices = normalizeServices(payload);
+        return {
+            services: safeServices ? safeServices : [],
+            error: null
+        };
+    }
+    catch (error) {
+        console.error(error);
+        return {
+            services: [],
+            error: 'No se pudieron cargar los servicios en este momento.'
         };
     }
 }
