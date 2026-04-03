@@ -40,22 +40,23 @@ jobs:
           aws-region: ${{ vars.AWS_REGION }}
 
       - name: Obtener ultimo job de main
+        shell: bash
         run: |
           JOB_ID=$(aws amplify list-jobs \
             --app-id "${{ vars.AMPLIFY_APP_ID }}" \
             --branch-name main \
-            --max-items 1 \
-            --query 'jobSummaries[0].jobId' \
-            --output text)
+            --max-items 25 \
+            --query "jobSummaries[?jobId!=null] | [0].jobId" \
+            --output text | tr -d '\r' | xargs)
 
-          echo "Ultimo job en PROD: $JOB_ID"
+          echo "Ultimo job en PROD: [$JOB_ID]"
 
-          if [ "$JOB_ID" = "None" ] || [ -z "$JOB_ID" ]; then
-            echo "No hay jobs en Amplify para la rama main"
+          if [ -z "$JOB_ID" ] || [ "$JOB_ID" = "None" ]; then
+            echo "No se encontro un job valido para la rama main"
             exit 1
           fi
 
-          echo "JOB_ID=$JOB_ID" >> $GITHUB_ENV
+          printf 'JOB_ID=%s\n' "$JOB_ID" >> "$GITHUB_ENV"
 
       - name: Consultar estado de PROD
         run: |
@@ -88,22 +89,23 @@ jobs:
           aws-region: ${{ vars.AWS_REGION }}
 
       - name: Obtener ultimo job de devel
+        shell: bash
         run: |
           JOB_ID=$(aws amplify list-jobs \
             --app-id "${{ vars.AMPLIFY_APP_ID }}" \
             --branch-name devel \
-            --max-items 1 \
-            --query 'jobSummaries[0].jobId' \
-            --output text)
+            --max-items 25 \
+            --query "jobSummaries[?jobId!=null] | [0].jobId" \
+            --output text | tr -d '\r' | xargs)
 
-          echo "Ultimo job en DEVEL: $JOB_ID"
+          echo "Ultimo job en DEVEL: [$JOB_ID]"
 
-          if [ "$JOB_ID" = "None" ] || [ -z "$JOB_ID" ]; then
-            echo "No hay jobs en Amplify para la rama devel"
+          if [ -z "$JOB_ID" ] || [ "$JOB_ID" = "None" ]; then
+            echo "No se encontro un job valido para la rama devel"
             exit 1
           fi
 
-          echo "JOB_ID=$JOB_ID" >> $GITHUB_ENV
+          printf 'JOB_ID=%s\n' "$JOB_ID" >> "$GITHUB_ENV"
 
       - name: Consultar estado de DEVEL
         run: |
