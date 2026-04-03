@@ -19,12 +19,20 @@ const routes = [
   {path: '/website/ourteam', name: 'team', component: Team},
   {path: '/website/services', name: 'services', component: Services},
   {path: '/website/workflow', name: 'workflow', component: WorkFlow},
+  {path: '/website/services', name: 'services', component: Services},
   {path: '/website/tecnologies', name: 'tecnologies', component: Tech}
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  }
 })
 
 export default router
