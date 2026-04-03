@@ -22,7 +22,7 @@ jobs:
 
       - name: Validar acceso a Amplify
         run: |
-          aws amplify get-app --app-id "${{ secrets.AMPLIFY_APP_ID }}"
+          aws amplify get-app --app-id "${{ vars.AMPLIFY_APP_ID }}"
 
   estado-prod:
     name: Estado en Prod
